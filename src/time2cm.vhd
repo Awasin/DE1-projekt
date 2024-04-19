@@ -32,7 +32,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity time2cm is
-    Port ( en : in STD_LOGIC;
+    Port ( en_m : in STD_LOGIC;
+           en_time :in STD_LOGIC;
            clk : in STD_LOGIC;
            rst : in STD_LOGIC;
            pulse : in STD_LOGIC;
@@ -58,7 +59,7 @@ signal sig_en : std_logic;
  
 begin
 
-    sig_en <= en and not sig_final(7);
+    sig_en <= (en_time and en_m) and not sig_final(7);
     
     jednotky: clock_enable
     generic map(
