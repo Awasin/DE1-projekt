@@ -36,7 +36,6 @@ entity time2cm is
            en_time :in STD_LOGIC;
            clk : in STD_LOGIC;
            rst : in STD_LOGIC;
-           pulse : in STD_LOGIC;
            count_s : out STD_LOGIC_VECTOR (7 downto 0));
 end time2cm;
 
